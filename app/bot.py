@@ -5,8 +5,6 @@ from app.handlers.menu import menu_handler
 from app.handlers.consultas import consulta_message_handler
 
 def create_bot():
-    print("=== TOKEN NO RUNTIME ===")
-    print("TOKEN:", repr(Config.BOT_TOKEN))
     app = ApplicationBuilder().token(Config.BOT_TOKEN).build()
 
     # Handlers centrais
@@ -15,7 +13,3 @@ def create_bot():
     app.add_handler(consulta_message_handler)
 
     return app
-
-
-    print("=== TOKEN NO RUNTIME ===")
-    print("TOKEN:", repr(Config.BOT_TOKEN))
